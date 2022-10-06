@@ -6,7 +6,7 @@ app.use(express.urlencoded({extended:false}));
 
 app.use(express.json());
 
-app.use(require("./src/routes/mails.js"));
+app.use("./src/routes/mails.js", routerMails);
 
 app.use(express.static(path.join(__dirname, "/")));
 

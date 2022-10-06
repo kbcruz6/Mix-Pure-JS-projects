@@ -1,5 +1,5 @@
 const { Router } = require("express");
-const { contentType } = require("express/lib/response");
+// const { contentType } = require("express/lib/response");
 const router = Router ();
 const nodemailer=require("nodemailer");
 
@@ -33,7 +33,7 @@ router.post("/send-email", async (req,res)=>{
         }
     });
 
-    const info=await transporter.sendMail({
+    const info = await transporter.sendMail({
         from:'"Amustino projects 👻" <amustino30@gmail.com',
         to: "agustintcruz@gmail.com, amustino30@gmail.com",
         subject:'Formulario de contacto',
