@@ -64,7 +64,7 @@ routerMails.post("/send-email", async (req, res) => {
     });
     console.log(' Message sent ', info.messageId);
 
-    res.redirect("https://kbcruz6.github.io/MixJsLittleProjects");   
+    res.redirect("/");   
 });
 
 module.exports=routerMails;
