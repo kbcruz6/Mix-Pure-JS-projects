@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <title>Mix JS Projects</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="mix.css">
+        <link rel="icon" type="image/png" href="/src/images/js-icon.png">
+
+    </head>
+    <body>
+
+    <div class="divCont">
+        <h1 class="header">Welcome!</h1>
+
+    <!-- REACT APPS  -->
+        <div class="react-cont">
+          <h4>Check my React Apps!</h4>
+          <button class="react-apps"><a href="https://kbcruz6.github.io/react/" target="_blank">Let see them!</a></button><br>
+          <button class="cv"><a href="https://kbcruz6.github.io/CvAgustinCruz/" target="_blank">Go back to the Resume</a></button>
+        </div>
+
+    <!-- MAIL FORM -->
+        <div class="form-cont">
+          <form class="form1" action="/send-email" method="post"><h4>Send me a message:</h4>
+              <input required class="fo1" name="name"  placeholder="Name" type="text">
+              <input required class="fo1" name="email"  placeholder="Email" type="email">
+              <input required class="fo1" name="phone"  placeholder="Phone" type="text" >
+              <textarea required class="fo1" name="message" placeholder="Write your message here"  cols="15" rows="3"></textarea>
+              <button class="enviar" type="submit">Submit</button>
+          </form>               
+          <!-- <form action="/send-email" method="post">
+            <input name="name" placeholder="name" type="text">
+            <input name="email" placeholder="email" type="text">
+            <input name="phone" placeholder="phone" type="text">
+            <button class="enviar" type="submit">Submit</button>
+          </form> -->
+        </div>
+
+    <!-- COLOURS -->
+            <div class="colores-cont">
+                <h4>Pick the background color please:</h4>
+                <button class="color rojo" data-color="red">Red</button>
+                <button class="color azul" data-color="blue">Blue</button>
+                <button class="color verde" data-color="green">Green</button>
+                <button class="color" data-color="#00203F">Let's go back to dark blue</button>
+                <br>
+                <h4>You can also choose from this list below:</h4>
+                <select class="lista">
+                    <option value="#00203F">Dark Blue</option>
+                    <option value="red">Red</option>
+                    <option value="blue">Blue</option>
+                    <option value="green">Green</option>
+                </select>
+            </div>
+
+    <!-- SUPER LIST  -->
+                <div class="list-cont">
+                    <h4>Supermarket List</h4>
+                    <ul id="tasks"></ul>
+                    <form class="form2">
+                        <input id="task" placeholder="New element" type="text" required>
+                        <button type="submit">Add</button>
+                    </form>
+                </div>
+
+
+    <!-- FIAT COTIZATION  -->
+                
+                    <div class="fiat-cont">
+                        <h4>How much vs USD?:</h4>
+                      <ul>
+                         <li>Euro: EUR</li>
+                         <li>GB Pound: GBP</li>
+                         <li>Japanese Yen: JPY</li>
+                         <li>Arg Peso (oficial): ARS</li>
+                      </ul>
+                        <form class="formFiat">
+                             <input id="fiat" placeholder="Type the acronym" type="text">
+                             <button type="submit">Consult</button>
+                        </form>
+                        <h4 id="resultFiat"></h4>
+                    </div>
+    
+    <!-- JUST -->
+
+            <div class="just-cont">
+                <h4>Swiss Just</h4>
+                <img alt="Swiss Just" title="Swiss Just" id="logoJust" src="data:image/png;base64,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">
+                <p>If you want to know the Swiss Just Products, let's talk to Maria Marta. You can visit the link below, or scan the QR.</p>
+                <a href="https://www.instagram.com/mariamartaw/" target="_blank">Contact her!</a><br>
+                <img alt="Código QR" id="codigo" title="QR MMW">
+  
+                <button id="btnDescargar">Click to download the QR</button>
+          </div>
+
+    <!-- CLOCKS -->
+        <div class="relojes-cont"><h4>Some diff JS code clocks:</h4>
+            <div class="bd-cont">
+                <div class="bd"></div><div class="age"></div>
+            </div>
+
+            <div class="reloj1-cont">
+                Right now time:<br>
+                <div class="reloj1">
+                    <div class="hora">00</div>
+                    <div class="min">00</div>
+                    <div class="seg">00</div>
+                </div>
+            </div>
+
+            <div class="reloj2"></div>
+        </div>
+
+    <!-- TEXTURE DRAG & DROP -->
+            <div class="texture-cont">
+                <h4 class="texturasTitle">Drag and drop the texture into the box below (PC only)</h4>
+                <div class="texturas">
+                    <div class="textura1"></div>
+                    <div class="textura2"></div>
+                    <div class="textura3"></div>
+                    <div class="textura4"></div>
+                 </div>
+                 <div class="zona"></div>
+            </div>
+
+    <!-- RANDOM STUFF BUTTONS -->
+        <div class="botones-cont"><h4>Random stuff:</h4>
+            <button class="boton cambiar">Let's move the Welcome sign</button>
+            <a href="https://kbcruz6.github.io/CvAgustinCruz/" class="CV" target="_blank"><b>Let's see Agustín's CV</b></a>
+            <button class="boton contar"> Click to count in the box below (try to reach 10)</button>
+            <button class="boton cero"> Click to reset</button> 
+            <p class="contador">0</p>
+        </div>    
+
+
+<!--SCRIPTS  -->
+        <script src="./mix.js"></script>
+        <script src="./index.js"></script>
+        <script src="https://unpkg.com/qrious@4.0.2/dist/qrious.js"></script>
+    </body>
+</html>

@@ -1,0 +1,709 @@
+*{
+    font-family: sans-serif;
+}
+body{
+    background-color: var(--color2);
+    padding: 15px;
+}
+:root{
+    --color1:#ADF0D1;
+    --color2:#00203F;
+    --color3:#174f87;
+    --color4:#6dc49b;
+    --color5:#012b54;
+    --color6:#033c75;
+} 
+/* .dark{
+    --color1:#ECE2d0;
+    --color2:#6E0D25;
+    --color3:#a42f27;
+    --color4:#fe7167;
+    --color5:#820d2a;
+} */
+
+button {
+    cursor:pointer;
+}
+button:active {
+    cursor:pointer;
+}
+.divCont{
+    margin: 20px;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    height: 90%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.header{
+    border:5px solid var(--color1);
+    color:var(--color1);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    border-radius: 4px;
+    width: 80%;
+    height: 80px;
+    animation: mover infinite 1s ease;
+    animation-play-state: paused;
+    margin: 20px;
+    transition: all 0.5s;
+}
+.header:hover{
+    background-color: var(--color6);
+}
+@keyframes mover {
+    0% {
+        opacity: 80%;
+        }
+    100% {
+        opacity: 80%;
+        transform: scale(0.68);
+    }
+
+}
+
+h4{
+    color: var(--color1);
+    margin-bottom: 20px;
+}
+/* --------------------------------------------------------------React Apps */
+.react-cont{
+    background-color: var(--color3);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    max-width: 300px;
+    margin: 20px;
+    padding: 20px;
+    padding-bottom: 10px;
+    transition: all 0.5s;
+    border: 3px solid var(--color6);
+    min-width: 250px;
+}
+.react-cont:hover{
+    background-color: var(--color6);
+    border-color: var(--color3);
+}
+
+.react-cont button{
+    outline: none;
+    background-color: var(--color2);
+    color: var(--color1);
+    border: none;
+    font-family: monospace;
+    font-size: 20px;
+    margin: 15px 10px;
+    border-radius: 4px;
+    padding: 10px;
+}
+.react-cont button:hover{
+    background-color: var(--color5);
+}
+.react-cont a{
+    text-decoration: none;
+    color: white;
+}
+
+/* ---------------------------------------------------------------MAIL FORM */
+.form-cont{
+    background-color: var(--color3);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    max-width: 300px;
+    margin: 20px;
+    padding: 20px;
+    padding-bottom: 10px;
+    transition: all 0.5s;
+    border: 3px solid var(--color6);
+}
+.form-cont:hover{
+    background-color: var(--color6);
+    border-color: var(--color3);
+}
+.form1 input, .form1 textarea{
+    color: var(--color1);
+    margin: 7px 5px;
+    outline: none;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid var(--color1);
+    width: 200px;
+}
+.form1 input::placeholder, .form1 textarea::placeholder{
+    color:var(--color1);
+    opacity: 0.5;
+}
+.form1 input:hover, .form1 textarea:hover{
+    background-color: var(--color2);
+    border-radius: 4px;
+}
+.form1 input:focus::placeholder, .form1 textarea:focus::placeholder{
+    opacity: 0;
+}
+.form1 input:focus, .form1 textarea:focus{
+    background-color: var(--color2);
+}
+.form1 .enviar{
+    outline: none;
+    background-color: var(--color2);
+    color: var(--color1);
+    border: none;
+    font-family: monospace;
+    font-size: 20px;
+    height: 40px;
+    width: 100px;
+    margin: 15px 10px;
+    border-radius: 4px;
+    padding: 0px;
+}
+.form1 .enviar:hover{
+    background-color: var(--color5);
+}
+
+/* ------------------------------------------------------------COLORES */
+
+.colores-cont{
+    background-color: var(--color3);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    width: 300px;
+    margin: 20px;
+    padding: 20px;
+    padding-top: 20px;
+    transition: all 0.5s;
+    border: 3px solid var(--color6);
+    min-width: 250px;
+
+
+}
+.colores-cont:hover{
+    background-color: var(--color6);
+    border-color: var(--color3);
+}
+.color{
+    margin: 10px 10px;
+}
+.colores-cont button, select{
+    border: none;
+    outline: none;
+    background-color: var(--color2);
+    color: var(--color1);
+    padding: 3px 6px;
+    border-radius: 4px;
+}
+.colores-cont button:hover,select:hover{
+    background-color: var(--color5);
+}
+.colores-cont .rojo:hover{
+    background-color: red;
+    color: #fff;
+}
+.colores-cont .azul:hover{
+    background-color: blue;
+    color: #fff;
+}
+.colores-cont .verde:hover{
+    background-color:green;
+    color: #fff;
+}
+select{
+    cursor: pointer;
+}
+
+/* ---------------------------------------------------------LISTA SUPER */
+
+.list-cont{
+    background-color: var(--color3);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    width: 300px;
+    margin: 20px;
+    padding: 20px;
+    padding-top: 20px;
+    transition: all 0.5s;
+    border: 3px solid var(--color6);
+    min-width: 250px;
+
+}
+.list-cont:hover{
+    background-color: var(--color6);
+    border-color: var(--color3);
+}
+.form2 input{
+    color: var(--color1);
+    margin: 7px 5px;
+    outline: none;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid var(--color1);
+    width: 200px;
+    display: inline-block;
+}
+.form2 input::placeholder{
+    color:var(--color1);
+    opacity: 0.5;
+}
+.form2 input:hover{
+    background-color: var(--color2);
+    border-radius: 4px;
+}
+.form2 input:focus::placeholder{
+    opacity: 0;
+}
+.form2 input:focus{
+    background-color: var(--color2);
+}
+.form2 button{
+    display: inline-block;
+    outline: none;
+    background-color: var(--color2);
+    color: var(--color1);
+    border: none;
+    font-family: monospace;
+    font-size: 15px;
+    border-radius: 4px;
+}
+.form2 button:hover{
+    background-color: var(--color5);
+}
+.list-cont ul{
+    color: var(--color1);
+    list-style-type: none;
+    text-align: left;
+    margin-left: 0px;
+    padding-left: 8px;
+}
+.list-cont ul li{
+    color: var(--color1);
+}
+.list-cont li::before{
+    content: "\2705 ";
+    margin: 0px;
+    color: var(--color1);
+    font-size:20px;
+}
+.borrame{
+    background-color: var(--color2);
+    color: var(--color1);
+    border: none;
+    outline: none;
+    font-family: monospace;
+    margin-left: 15px;
+    border-radius: 4px;
+    height: 15px;
+    width: 15px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding:0px;
+}
+.borrame:hover{
+    background-color: var(--color5);
+}
+/* -----------------------------------------------------------FIAT COTIZATION  */
+
+.fiat-cont{
+    background-color: var(--color3);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    min-width: 250px;
+    margin: 20px;
+    padding: 20px;
+    padding-top: 20px;
+    transition: all 0.5s;
+    border: 3px solid var(--color6);
+    min-width: 250px;
+
+}
+.fiat-cont:hover{
+    background-color: var(--color6);
+    border-color: var(--color3);
+}
+.fiat-cont h4{
+    font-size: 20px;
+}
+.fiat-cont li{
+    list-style: none;
+    color:var(--color1);
+    text-align: left;
+    margin: 10px 5px;
+}
+.fiat-cont li::before{
+    content: "\1F525 ";
+    margin: 0px;
+    color: var(--color1);
+    font-size:20px;
+}
+.fiat-cont ul{
+    margin: 0px;
+    padding: 0px;
+}
+.formFiat input{
+    color: var(--color1);
+    margin: 10px 5px;
+    outline: none;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid var(--color1);
+    width: 150px;
+    display: inline-block;
+}
+.formFiat input::placeholder{
+    color:var(--color1);
+    opacity: 0.5;
+}
+.formFiat input:hover{
+    background-color: var(--color2);
+    border-radius: 4px;
+}
+.formFiat input:focus::placeholder{
+    opacity: 0;
+}
+.formFiat input:focus{
+    background-color: var(--color2);
+}
+.formFiat button{
+    display: inline-block;
+    outline: none;
+    background-color: var(--color2);
+    color: var(--color1);
+    border: none;
+    font-family: monospace;
+    font-size: 15px;
+    border-radius: 4px;
+}
+.formFiat button:hover{
+    background-color: var(--color5);
+}
+.formFiat input:focus::placeholder{
+    opacity: 0;
+}
+.formFiat input:focus{
+    background-color: var(--color2);
+}
+
+.numerito{
+    font-size: 30px;
+}
+#result, #resultFiat{
+    color: var(--color3);
+    background-color: var(--color4);
+    text-align: center;
+    margin: auto 5px;
+    margin-top: 10px;
+    padding: 0px;
+    font-size: 18px;
+}
+/* -----------------------------------------------------------------JUST */
+
+.just-cont{
+    background-color: var(--color3);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    width: 300px;
+    margin: 20px;;
+    padding: 20px;
+    padding-top: 20px;
+    transition: all 0.5s;
+    border: 3px solid var(--color6);
+    min-width: 250px;
+
+}
+.just-cont:hover{
+    background-color: var(--color6);
+    border-color: var(--color3);
+}
+.just-cont p{
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    color: var(--color1);
+    font-size: 15px;
+}
+.just-cont a{
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    color: var(--color1);   
+}
+.just-cont a:hover{
+    color: var(--color4);
+}
+
+#logoJust{
+    width: 80px;
+    height: 60px;
+    float: left;
+    margin-right: 15px;
+    border:2px solid var(--color2);
+    margin-bottom: 0px;
+}
+
+#codigo{
+    margin:10px auto;
+    border: 2px solid var(--color2);
+}
+
+#btnDescargar{
+    display: inline-block;
+    outline: none;
+    background-color: var(--color2);
+    color: var(--color1);
+    border: none;
+    font-family: monospace;
+    font-size: 15px;
+    border-radius: 4px;
+}
+
+#btnDescargar:hover{
+    background-color: var(--color5);
+}
+
+/* ----------------------------------------------------------------RELOJES CONT */
+.relojes-cont{
+    background-color: var(--color3);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    max-width: 300px;
+    margin: 20px;
+    padding: 20px;
+    transition: all 0.5s;
+    border: 3px solid var(--color6);
+    min-width: 250px;
+
+}
+.relojes-cont:hover{
+    background-color: var(--color6);
+    border-color: var(--color3);
+}
+/* --------------------------AGE */
+.bd-cont{
+    color:var(--color1);
+    border: 3px solid var(--color2);
+    border-radius: 4px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    margin: 18px 10px;
+    padding: 2px;
+}
+.bd,.age{
+    font-size: 15px;
+    margin: auto;
+}
+/* --------------------------RELOJ 1 */
+.reloj1-cont{
+    color:var(--color1);
+    padding: 5px 7px;
+    font-size: 20px;
+    font-family: monospace;
+    border: 3px solid var(--color2);
+    border-radius: 4px;
+    margin: 18px 10px;
+}
+.reloj1{
+    background:linear-gradient(var(--color2), var(--color5));
+    border:3px solid var(--color2);
+    display: inline-flex;
+    border-radius: 4px;
+    padding: 4px;
+    margin:auto;
+}
+
+
+/* --------------------------RELOJ 2*/
+.reloj2 {
+    color:var(--color1);
+    border: 3px solid var(--color2);
+    border-radius: 4px;
+    font-size: 20px;
+    font-family: monospace;
+    margin: 18px 10px;
+}
+
+/* -----------------------------------------------------------------TEXTURAS */
+.texture-cont{
+    background-color: var(--color3);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    width: 300px;
+    margin: 20px;
+    padding: 20px;
+    padding-top: 20px;
+    transition: all 0.5s;
+    border: 3px solid var(--color6);
+    min-width: 250px;
+
+}
+.texture-cont:hover{
+    background-color: var(--color6);
+    border-color: var(--color3);
+}
+.texture-cont h4{
+    font-size: 20px;
+}
+.texturas{
+    display: inline-block;
+    margin: 5px;
+    padding: 0px;
+    border:2px solid var(--color2);
+    border-radius: 5px;
+    user-select: none;
+    width: 250px;
+}
+.texturas div{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    user-select: all;
+}
+.texturas div:active{
+    opacity: 0.55;
+}
+.textura1{
+    background: url("/src/images/textura1.jpg");
+    border: 1px solid var(--color1);
+
+}
+.textura2{
+    background: url("/src/images/textura2.jpg");
+    border: 1px solid var(--color1);
+
+}
+.textura3{
+    background: url("/src/images/textura3.jpg");
+    border: 1px solid var(--color1);
+
+}
+.textura4{
+    background-color: var(--color3);
+    border: 1px solid #fff;
+}
+
+.zona{
+    border: 2px solid var(--color2);
+    height: 100px;
+    border-radius: 4px;
+    width: 250px;
+    margin: 15px auto;
+}
+
+
+/* ------------------------------------------------------BOTONES CONT*/
+.botones-cont{
+    background-color: var(--color3);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    max-width: 300px;
+    margin: 20px;
+    padding: 20px;
+    transition: all 0.5s;
+    border: 3px solid var(--color6);
+    min-width: 250px;
+
+}
+.botones-cont:hover{
+    background-color: var(--color6);
+    border-color: var(--color3);
+}
+.boton, .CV, .cronometro{
+    border: 3px solid transparent;
+    background-color: var(--color2);
+    color:var(--color1);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 4px;
+    margin: 10px auto;
+    padding: 4px 10px;
+    text-decoration: none;
+    font-size: 15px;
+
+}
+.boton:hover, .CV:hover{
+    background-color: var(--color5);
+}
+
+/* --------------------------CONTADOR */
+.contador{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color3);
+    color:var(--color1);
+    border:3px solid var(--color2);
+    border-radius: 4px;
+    width: 100px;
+    margin:auto;
+}
+
+/* ------------------------------------------ANIMACION BORRAR DE LISTA */
+li{
+    animation:borrando 2s forwards;
+    animation-play-state:paused;
+    height: 100%;
+    margin-bottom: 5px;
+    line-height: 100%;
+    padding: 5px;
+    font-size: 15px;
+}
+
+
+@keyframes borrando {
+
+    0% {
+        opacity: 1;
+        height: 100%;
+        line-height: 100%;
+        padding: 5px;
+        margin-bottom: 5px;
+    }
+    
+    75%{
+        opacity: 0;
+        height: 100%;
+        line-height: 100%;
+        padding: 5px;
+        margin-bottom: 5px;
+    }
+    100%{
+        opacity: 0;
+        height: 0px;
+        line-height: 0px;
+        padding: 0px;
+        margin: 0px;
+    }
+}
+/* ------------------------------------------------MOBILE */
+
+@media screen and (max-width:450px) {
+ .texture-cont{
+    display: none;
+ }
+}
