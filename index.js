@@ -1,14 +1,20 @@
-const express = require("express");
+const express = require('express');
 const app = express();
-const path = require ("path");
+const path = require ('path');
+const bodyParser = require('body-parser');
 
-app.use(express.urlencoded({extended:false}));
 
-app.use(express.json());
+// Routing
+app.use(express.static(path.join(__dirname + "/")));
 
-app.use("./src/routes/mails.js", routerMails);
+app.use(bodyParser.urlencoded({extended:false}));
 
-app.use(express.static(path.join(__dirname, "/")));
+app.use(bodyParser.json());
+
+// Routers
+const routerMails = require ('./src/routes/mails.js')
+app.use(routerMails);
+
 
 const PUERTO = process.env.PORT || 3000;
 

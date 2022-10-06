@@ -1,9 +1,32 @@
-const { Router } = require("express");
-// const { contentType } = require("express/lib/response");
-const router = Router ();
-const nodemailer=require("nodemailer");
+const express = require("express");
 
-router.post("/send-email", async (req,res)=>{
+const nodemailer = require("nodemailer");
+
+const routerMails = express.Router();
+
+// Middleware
+// routerMails.use(express.json());
+// ----------------
+
+// POST, envia info
+// routerMails.post('/', (req, res) =>{
+//     let cursoNuevo = req.body;
+//     programacion.push(cursoNuevo);
+//     res.send(programacion);
+// });
+// ----------------
+// -------------------------------------------
+
+// app.post('/send-email',function(req,res){
+//     var username = req.body.username;
+//     var htmlData = 'Hello:' + username;
+//     res.send(htmlData);
+//     console.log(htmlData);
+//  });
+
+// -------------------------------------------
+
+routerMails.post("/send-email", async (req, res) => {
     const { name, email, phone, message }= req.body;
     console.log(req.body);
 
@@ -39,9 +62,11 @@ router.post("/send-email", async (req,res)=>{
         subject:'Formulario de contacto',
         html:contentHTML
     });
-    console.log('Message sent', info.messageId);
+    console.log(' Message sent ', info.messageId);
 
-    res.redirect("https://kbcruz6.github.io/MixJsLittleProjects/");   
+    res.redirect("https://kbcruz6.github.io/MixJsLittleProjects");   
 });
 
-module.exports=router;
+module.exports=routerMails;
+
+// https://kbcruz6.github.io/MixJsLittleProjects
