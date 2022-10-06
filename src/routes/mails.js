@@ -4,27 +4,6 @@ const nodemailer = require("nodemailer");
 
 const routerMails = express.Router();
 
-// Middleware
-// routerMails.use(express.json());
-// ----------------
-
-// POST, envia info
-// routerMails.post('/', (req, res) =>{
-//     let cursoNuevo = req.body;
-//     programacion.push(cursoNuevo);
-//     res.send(programacion);
-// });
-// ----------------
-// -------------------------------------------
-
-// app.post('/send-email',function(req,res){
-//     var username = req.body.username;
-//     var htmlData = 'Hello:' + username;
-//     res.send(htmlData);
-//     console.log(htmlData);
-//  });
-
-// -------------------------------------------
 
 routerMails.post("/send-email", async (req, res) => {
     const { name, email, phone, message }= req.body;
@@ -68,5 +47,3 @@ routerMails.post("/send-email", async (req, res) => {
 });
 
 module.exports=routerMails;
-
-// https://kbcruz6.github.io/MixJsLittleProjects
