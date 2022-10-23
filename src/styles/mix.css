@@ -120,7 +120,7 @@ h4{
     border-radius: 4px;
     max-width: 300px;
     margin: 20px;
-    padding: 20px;
+    padding: 5px;
     padding-bottom: 10px;
     transition: all 0.5s;
     border: 3px solid var(--color6);
@@ -128,6 +128,9 @@ h4{
 .form-cont:hover{
     background-color: var(--color6);
     border-color: var(--color3);
+}
+.form1 h4{
+    margin-top: 15px;
 }
 .form1 input, .form1 textarea{
     color: var(--color1);
