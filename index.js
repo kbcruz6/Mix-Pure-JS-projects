@@ -9,9 +9,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 //! Create GET request
-app.get("/", (req, res) => {
-  res.send("Express on Vercel");
-});
+// app.get("/", (req, res) => {
+//   res.send("Express on Vercel");
+// });
 
 //! Routers
 const routerMails = require("./src/routes/mails.js");
