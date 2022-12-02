@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 
 // Create GET request
 app.get("/", (req, res) => {
-  res.send();
+  res.send("/index.html");
 });
 
 // Routers
