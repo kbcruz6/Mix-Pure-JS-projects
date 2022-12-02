@@ -1,5 +1,7 @@
 {
   "version": 2,
+  "name": "nodejs-express",
+
   "builds": [
     {
       "src": "./index.js",
@@ -9,7 +11,7 @@
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/"
+      "dest": "index.js"
     }
   ]
 }
