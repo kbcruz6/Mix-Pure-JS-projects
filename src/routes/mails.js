@@ -3,13 +3,13 @@ const express = require("express");
 const nodemailer = require("nodemailer");
 
 const routerMails = express.Router();
-
+require("dotenv").config();
 
 routerMails.post("/send-email", async (req, res) => {
-    const { name, email, phone, message }= req.body;
-    console.log(req.body);
+  const { name, email, phone, message } = req.body;
+  console.log(req.body);
 
-    contentHTML=`
+  contentHTML = `
         <h2>You have a new message from:</h2>
         <ul>
             <li><h3>Name: ${name}</h3></li>
@@ -20,30 +20,30 @@ routerMails.post("/send-email", async (req, res) => {
         <p>${message}</p>
     `;
 
-    console.log(contentHTML);
+  console.log(contentHTML);
 
-    const transporter=nodemailer.createTransport({
-        host:"smtp.gmail.com",
-        port:465,
-        secure:true,
-        auth:{
-            user:"amustino30@gmail.com",
-            pass: "smrlocisaknpkklm"
-        },
-        tls:{
-            rejectUnauthorized:false
-        }
-    });
+  const transporter = nodemailer.createTransport({
+    host: "smtp.gmail.com",
+    port: 465,
+    secure: true,
+    auth: {
+      user: process.env.USER_EMAIL,
+      pass: process.env.PASS,
+    },
+    tls: {
+      rejectUnauthorized: false,
+    },
+  });
 
-    const info = await transporter.sendMail({
-        from:'"Amustino projects 👻" <amustino30@gmail.com',
-        to: "agustintcruz@gmail.com, amustino30@gmail.com",
-        subject:'Formulario de contacto',
-        html:contentHTML
-    });
-    console.log(' Message sent ', info.messageId);
+  const info = await transporter.sendMail({
+    from: `"Amustino projects 👻" <${process.env.USER_EMAIL}>`,
+    to: `${process.env.DESTINATION_EMAIL}, ${process.env.USER_EMAIL}`,
+    subject: "Formulario de contacto",
+    html: contentHTML,
+  });
+  console.log(" Message sent ", info.messageId);
 
-    res.redirect("/");   
+  res.redirect("/");
 });
 
-module.exports=routerMails;
+module.exports = routerMails;
