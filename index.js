@@ -16,8 +16,8 @@ app.get("/", (req, res) => {
 });
 
 // Routers
-const routerMails = require("./src/routes/mails.js");
-app.use(routerMails);
+const home = require("./src/routes/mails.js");
+app.use("/home", home);
 
 const PUERTO = process.env.PORT || 5000;
 
