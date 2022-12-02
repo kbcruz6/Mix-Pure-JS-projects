@@ -2,7 +2,6 @@ const express = require("express");
 const app = express();
 const path = require("path");
 const bodyParser = require("body-parser");
-const routerMails = require("./src/routes/mails");
 
 // Routing
 app.use(express.static(path.join(__dirname + "/")));
@@ -17,7 +16,7 @@ app.get("/", (req, res) => {
 });
 
 // Routers
-const routerMails = require("./src/routes", routerMails);
+const routerMails = require("./src/routes/mails.js");
 app.use(routerMails);
 
 const PUERTO = process.env.PORT || 5000;
